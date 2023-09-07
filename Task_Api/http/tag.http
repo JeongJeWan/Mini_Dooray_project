@@ -1,0 +1,26 @@
+### 태그 생성
+POST http://localhost:6060/task/tags
+Content-Type: application/json
+
+{
+  "projectId": 1,
+  "name": "marcotag"
+}
+
+### 프로젝트에 속한 태그 조회
+GET http://localhost:6060/task/tags/project/1
+
+### 태그 조회
+GET http://localhost:6060/task/tags/1
+
+### 태그 수정
+PUT http://localhost:6060/task/tags
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "modifytag"
+}
+
+### 태그 삭제
+DELETE http://localhost:6060/task/tags/1

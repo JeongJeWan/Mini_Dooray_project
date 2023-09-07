@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="/fragments/header :: html-head">
+    <title>회원가입</title>
+</head>
+<body>
+
+<form th:action="@{/signup}" method="POST" th:object="${userSignUpDto}">
+    <input type="text" name="userId" placeholder="USERNAME" />
+    <br />
+    <span class="error" th:if="${#fields.hasErrors('userId')}" th:error="*{userId}">USERNAME ERROR</span>
+    <br />
+    <input type="password" name="userPassword" placeholder="PASSWORD" />
+    <br />
+    <span class="error" th:if="${#fields.hasErrors('userPassword')}" th:errors="*{userPassword}">PASSWORD ERROR</span>
+    <br />
+    <input type="email" name="userEmail" placeholder="EMAIL">
+    <br />
+    <span class="error" th:if="${#fields.hasErrors('userEmail')}" th:errors="*{userEmail}">EMAIL ERROR</span>
+    <br />
+    <input type="submit" value="회원가입" />
+</form>
+
+</body>
+</html>

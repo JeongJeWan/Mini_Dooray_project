@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="ko">
+<head th:replace="/fragments/header :: html-head">
+</head>
+<body>
+
+<form th:action="@{/login}" method="POST">
+
+    <input type="text" name="username" placeholder="USERNAME">
+    <br/><br/>
+    <input type="password" name="password" placeholder="PASSWORD">
+    <br/><br/>
+    <input type="submit" value="LOGIN">
+</form>
+<a href="/login/github">GITHUB</a>
+</body>
+</html>

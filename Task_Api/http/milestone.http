@@ -1,0 +1,27 @@
+### 마일스톤 생성
+POST http://localhost:6060/task/milestones
+Content-Type: application/json
+
+{
+  "projectId": 1,
+  "name": "Milestone"
+}
+
+### 프로젝트에 대한 마일스톤 조회
+GET http://localhost:6060/task/milestones/project/1
+
+### 해당 마일스톤에 대한 조회
+GET http://localhost:6060/task/milestones/1
+
+### 마일스톤 수정
+PUT http://localhost:6060/task/milestones
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Good",
+  "createdAt": "2023-06-09T00:00:00"
+}
+
+### 마일스톤 삭제
+DELETE http://localhost:6060/task/milestones/1

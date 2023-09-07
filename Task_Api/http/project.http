@@ -1,0 +1,18 @@
+### 프로젝트 생성
+POST http://localhost:6060/task/projects
+Content-Type: application/json
+
+{
+  "projectAdmin": "marco",
+  "name": "Project",
+  "content": "Good Marco"
+}
+
+### 해당 프로젝트 조회
+GET http://localhost:6060/task/projects/1
+
+### 해당 프로젝트에 멤버 조회
+GET http://localhost:6060/task/projects/members/marco
+
+### 프로젝트 상태 종료 처리
+PUT http://localhost:6060/task/projects/1/terminate

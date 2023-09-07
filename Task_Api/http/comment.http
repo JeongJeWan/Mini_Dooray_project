@@ -1,0 +1,21 @@
+### 댓글 생성
+POST http://localhost:6060/task/comments
+Content-Type: application/json
+
+{
+  "taskId": 1,
+  "registerId": "marco",
+  "content": "Marco GOOD"
+}
+
+### 댓글 수정
+PUT http://localhost:6060/task/comments
+Content-Type: application/json
+
+{
+  "id": 5,
+  "content": "Modify Marco"
+}
+
+### 댓글 삭제
+DELETE http://localhost:6060/task/comments/1
